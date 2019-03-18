@@ -7,4 +7,10 @@ app.get('/', (request, response) => {
 
 })
 
-app.listen(7000);
+//Environment Variables
+//PRODUCTION environment - heroku
+//DEVELOPMENT environment - default
+const PORT = process.env.PORT || 5000;
+
+
+app.listen(PORT);
